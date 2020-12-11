@@ -5,83 +5,116 @@ import Cocoa
 import PlaygroundSupport
 import CanvasGraphics
 
-
 // Create canvas
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
-
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
-//create a turtle to use
+//create turtle
 let turtle = Tortoise(drawingUpon: canvas)
-func drawArrow(){
+
+// Culminating task
+// creating my teselating shape
+//draw my shape
+func drawShape(){
+    turtle.penDown()
+    turtle.right(by: 45)
+    turtle.forward(steps: 40)
+    turtle.left(by: 90)
+    turtle.forward(steps: 20)
+    turtle.right(by: 45)
+    turtle.forward(steps: 20)
+    turtle.left(by: 45)
+    turtle.forward(steps: 20)
+    turtle.right(by: 135)
+    turtle.forward(steps: 60)
+    //not sure on right/left
+    turtle.left(by: 45 + 90 + 180)
+    turtle.forward(steps: 20)
+    //will be opposite of one above
+    turtle.left(by: 90)
+   turtle.forward(steps: 20)
+    turtle.right(by: 90)
+    turtle.forward(steps: 20)
+    turtle.left(by: 45 + 90 + 180)
+    turtle.forward(steps: 20)
+    turtle.left(by: 45)
+    turtle.forward(steps: 20)
+    turtle.left(by: 90 + 180)
+    turtle.forward(steps: 60)
+   //not sure bout left or right
+    turtle.right(by: 90)
+    turtle.forward(steps: 20)
+    turtle.left(by: 45)
+    turtle.forward(steps: 60)
+}
+//moving turtle into place
 turtle.penUp()
-turtle.forward(steps: 80)
 turtle.left(by: 90)
-turtle.forward(steps: 120)
+turtle.forward(steps: 200)
 turtle.right(by: 90)
+//function to loop it
 turtle.penDown()
-turtle.left(by: 90)
-turtle.forward(steps: 50)
+for _ in 1...7 {
+    turtle.penDown()
+    drawShape()
+    turtle.penUp()
 turtle.right(by: 90)
-turtle.forward(steps: 125)
+turtle.forward(steps: 77)
+}
+// setting up for second row
+turtle.backward(steps: 539)
+turtle.penUp()
 turtle.left(by: 90)
-turtle.forward(steps: 25)
-turtle.right(by: 130)
-turtle.forward(steps: 80)
-turtle.right(by: 105)
-turtle.forward(steps: 80)
-turtle.left(by: 55 + 180)
-turtle.forward(steps: 25)
-turtle.left(by: 90)
-turtle.forward(steps: 120)
+turtle.forward(steps: 89)
 turtle.right(by: 90)
-    turtle.forward(steps: 100)
+//starting second row
+for _ in 1...7 {
+    turtle.penDown()
+    drawShape()
+    turtle.penUp()
+turtle.right(by: 90)
+turtle.forward(steps: 77)
 }
-
-for _ in 1...3{
-drawArrow()
+// setting up for third row
+turtle.backward(steps: 539)
+turtle.penUp()
+turtle.left(by: 90)
+turtle.forward(steps: 89)
+turtle.right(by: 90)
+//starting third row
+for _ in 1...7 {
+    turtle.penDown()
+    drawShape()
+    turtle.penUp()
+turtle.right(by: 90)
+turtle.forward(steps: 77)
 }
-
-//turtle.forward(steps: 125)
-//turtle.right(by: 90)
-//turtle.forward(steps: 25)
-//turtle.left(by: 130)
-//turtle.forward(steps: 80)
-//turtle.left(by: 90)
-//turtle.forward(steps: 80)
-//turtle.right(by: 50 + 180)
-//turtle.forward(steps: 25)
-//turtle.right(by: 80)
-//turtle.forward(steps: 125)
-
-//
-//turtle.penUp()
-//turtle.forward(steps: 50)
-//turtle.left(by: 90)
-//turtle.forward(steps: 150)
-//turtle.left(by: 270)
-//for _ in 1...4 {
-//    turtle.forward(steps: 50)
-//    turtle.left(by: 90)
-//    turtle.penDown()
-//}
-//
-////draw an "n"-sided polygon
-//func drawPolygon(withSidelength l: Int,
-//    withSides n: Int) {
-//
-//    let interiorAngle: Degrees = (Degrees ( n - 2 ) * 180 ) / Degrees(n)
-//
-//    for _ in 1...n {
-//
-//        turtle.forward(steps: l)
-//        turtle.left(by: interiorAngle)
-//
-//    }
-//
-//}
-//
-//
-//drawPolygon(withSidelength: 250, withSides: 100)
-
+// setting up for fourth row
+turtle.backward(steps: 539)
+turtle.penUp()
+turtle.left(by: 90)
+turtle.forward(steps: 89)
+turtle.right(by: 90)
+//starting fourth row
+for _ in 1...7 {
+    turtle.penDown()
+    drawShape()
+    turtle.penUp()
+turtle.right(by: 90)
+turtle.forward(steps: 77)
+}
+// setting up for fifth row
+turtle.backward(steps: 539)
+turtle.penUp()
+turtle.left(by: 90)
+turtle.forward(steps: 89)
+turtle.right(by: 90)
+//starting fifth row
+for _ in 1...7 {
+    turtle.penDown()
+    drawShape()
+    turtle.penUp()
+turtle.right(by: 90)
+turtle.forward(steps: 77)
+}
