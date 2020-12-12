@@ -151,4 +151,4 @@ turtle.right(by: 90)
 turtle.forward(steps: 77)
 }
 
-turtle.copySVGToClipboard()
+
